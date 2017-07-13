@@ -24,6 +24,7 @@ function Game(){
         }
         this.randomize();
         this.populatePlayerCards();
+        this.compare();
         // console.log("this.cardList: ", this.cardList);
     }
 
@@ -39,14 +40,22 @@ function Game(){
     this.populatePlayerCards = function(inputNum){
         var tempIndex = 0;
         while(this.randomizedCardList.length > 0){
-            this.playerList[tempIndex].push(this.randomizedCardList[0]);
-            this.randomizedCardList.shift();
+            this.playerList[tempIndex].push(this.randomizedCardList.shift());
             tempIndex++;
             if(tempIndex > 3){
                 tempIndex = 0;
             }
         }
-        console.log("this.playerList: ", this.playerList);
+        // console.log("this.playerList: ", this.playerList);
+    }
+
+    this.compare = function(){
+        var tempArr= [];
+        for(i=0;i<4;i++){
+            // console.log(i + ": this.playerList[i][0]: ", this.playerList[i][0]);
+            // console.log(i + ": this.playerList[i].shift", this.playerList[i].shift());
+            tempArr.push()
+        }
     }
 
 }
